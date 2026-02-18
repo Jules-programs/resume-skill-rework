@@ -1,5 +1,7 @@
-resume_data.py
 resume.html
-resume.css
+resume_data.py
 .gitignore
 .env.local
+experience.json
+projects.json
+skills.json

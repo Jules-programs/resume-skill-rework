@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+    background: white;
+    color: #000;
+}
+
+.container {
+    width: 750px;
+    margin: auto;
+}
+
+.name {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact {
+    font-size: 14px;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 3px;
+}
+
+.section {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* SKILLS TABLE (Invisible Borders) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+td {
+    width: 50%;
+    vertical-align: top;
+    padding: 2px 0;
+    font-size: 14px;
+}
+
+/* Category headers */
+td.category {
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Bullet-style dash */
+.skill-item::before {
+    content: "- ";
+}
