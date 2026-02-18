@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ full_name }} - Resume</title>
+</head>
+
+<body>
+<div id="resume">
+
+    <!-- HEADER -->
+    <header>
+        <h1>{{ full_name }}</h1>
+
+        <div id="contact">
+            <p>{{ address }}</p>
+            <p>{{ phone }}</p>
+            <p>{{ email }}</p>
+
+            <p>
+                GitHub:
+                <a href="{{ github_url }}">{{ github_url }}</a>
+            </p>
+
+            <p>
+                LinkedIn:
+                <a href="{{ linkedin_url }}">{{ linkedin_url }}</a>
+            </p>
+        </div>
+    </header>
+
+
+    <!-- EDUCATION -->
+    <section>
+        <h2>Education</h2>
+
+        <div class="education-item">
+            <h3>{{ school_name }}</h3>
+            <p>{{ degree }}</p>
+            <p>{{ graduation_date }}</p>
+            <p>GPA: {{ gpa }}</p>
+        </div>
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section>
+        <h2>Projects</h2>
+
+        {{#projects}}
+        <div class="project">
+            <h3>{{ project_name }}</h3>
+            <ul>
+                {{#project_bullets}}
+                <li>{{ . }}</li>
+                {{/project_bullets}}
+            </ul>
+        </div>
+        {{/projects}}
+
+    </section>
+
+
+    <!-- WORK EXPERIENCE -->
+    <section>
+        <h2>Work Experience</h2>
+
+        {{#jobs}}
+        <div class="job">
+            <h3>{{ job_title }} — {{ company_name }}</h3>
+            <p>{{ job_dates }}</p>
+
+            <ul>
+                {{#job_bullets}}
+                <li>{{ . }}</li>
+                {{/job_bullets}}
+            </ul>
+        </div>
+        {{/jobs}}
+
+    </section>
+
+
+    <!-- TECHNICAL SKILLS -->
+    <section>
+        <h2>Technical Skills</h2>
+
+        {{#skill_categories}}
+        <div class="skill-category">
+            <h3>{{ category_name }}</h3>
+            <ul>
+                {{#skills}}
+                <li>{{ . }}</li>
+                {{/skills}}
+            </ul>
+        </div>
+        {{/skill_categories}}
+
+    </section>
+
+
+    <!-- LANGUAGES -->
+    <section>
+        <h2>Languages</h2>
+        <p>{{ languages }}</p>
+    </section>
+
+</div>
+</body>
+</html>
