@@ -3,59 +3,72 @@
 <head>
     <meta charset="UTF-8" />
     <title>{{FIRST_NAME}} {{LAST_NAME}} - Resume</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
 </head>
 
 <body>
 
-<div class="container">
+<div class="resume">
 
     <!-- HEADER -->
-    <h1 class="name">{{FIRST_NAME}} {{LAST_NAME}}</h1>
-
-    <div class="contact">
-        {{ADDRESS}}<br>
-        {{PHONE}} • {{EMAIL}}<br>
-        GitHub: {{GITHUB}} • LinkedIn: {{LINKEDIN}}
+    <div class="header">
+        <div class="header-left">
+            <h1 class="name">{{FIRST_NAME}} {{LAST_NAME}}</h1>
+        </div>
+        <div class="header-right">
+            <p>{{ADDRESS}}</p>
+            <p>{{PHONE}}</p>
+            <p><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
+            <p><a href="{{GITHUB}}">GitHub</a></p>
+            <p><a href="{{LINKEDIN}}">LinkedIn</a></p>
+        </div>
     </div>
 
-    <!-- SUMMARY -->
-    <h2>SUMMARY</h2>
-    <div class="section">
-        {{SUMMARY}}
-    </div>
+    <div class="content">
 
-    <!-- EDUCATION -->
-    <h2>EDUCATION</h2>
-    <div class="section">
-        <strong>{{SCHOOL}} – {{DEGREE}}</strong><br>
-        {{GRADUATION_DATE}}<br>
-        {{PROGRAM}}<br>
-        GPA: {{GPA}}
-    </div>
+        <!-- LEFT COLUMN -->
+        <div class="left-column">
 
-    <!-- PROJECTS -->
-    <h2>PROJECTS</h2>
-    <div class="section">
-        {{PROJECTS}}
-    </div>
+            <section>
+                <h2>Education</h2>
+                <div class="entry">
+                    <div class="entry-title">
+                        <strong>{{SCHOOL}}</strong>
+                        <span class="italic">{{DEGREE}}</span>
+                    </div>
+                    <p>{{GRADUATION_DATE}}</p>
+                    <p>{{PROGRAM}}</p>
+                    <p><strong>GPA:</strong> {{GPA}}</p>
+                </div>
+            </section>
 
-    <!-- EXPERIENCE -->
-    <h2>WORK EXPERIENCE</h2>
-    <div class="section">
-        {{EXPERIENCE}}
-    </div>
+            <section>
+                <h2>Projects</h2>
+                {{PROJECTS}}
+            </section>
 
-    <!-- SKILLS -->
-    <h2>SKILLS</h2>
-    <div class="section">
-        {{SKILLS_TABLE}}
-    </div>
+            <section>
+                <h2>Work Experience</h2>
+                {{EXPERIENCE}}
+            </section>
 
-    <!-- LANGUAGES -->
-    <h2>LANGUAGES</h2>
-    <div class="section">
-        {{LANGUAGES}}
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="right-column">
+
+            <section>
+                <h2>Skills</h2>
+                {{SKILLS_TABLE}}
+            </section>
+
+            <section>
+                <h2>Languages</h2>
+                {{LANGUAGES}}
+            </section>
+
+        </div>
+
     </div>
 
 </div>

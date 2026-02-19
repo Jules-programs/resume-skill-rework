@@ -8,6 +8,7 @@ import ollama
 # Load environment variables
 load_dotenv()
 
+
 # -----------------------------
 # LOAD EXTERNAL DATA
 # -----------------------------
@@ -21,7 +22,13 @@ def load_profile():
         "PHONE": os.getenv("PHONE", ""),
         "ADDRESS": os.getenv("ADDRESS", ""),
         "GITHUB": os.getenv("GITHUB", ""),
-        "LINKEDIN": os.getenv("LINKEDIN", "")
+        "LINKEDIN": os.getenv("LINKEDIN", ""),
+        "SCHOOL": os.getenv("SCHOOL", ""),
+        "DEGREE": os.getenv("DEGREE", ""),
+        "GRADUATION_DATE": os.getenv("GRADUATION_DATE", ""),
+        "PROGRAM": os.getenv("PROGRAM", ""),
+        "GPA": os.getenv("GPA", ""),
+        "LANGUAGES": os.getenv("LANGUAGES", ""),
     }
 
 def load_projects():
@@ -108,7 +115,7 @@ def build_relevant_skills(job_profile: dict) -> dict:
 
     ALWAYS_KEEP = {
         "git", "github", "debugging", "react", "next.js",
-        "node.js", "express.js", "sql", "mysql", "mongodb"
+        "TypeScript", 
     }
 
     filtered = {}
@@ -218,7 +225,7 @@ def fill_static_placeholders(html: str) -> str:
     return html
 
 def fill_resume_template(summary, projects, experience, skills_table_html):
-    html = Path("resume_template.html").read_text()
+    html = Path("resume-tailor/resume_template.html").read_text()
 
     html = fill_static_placeholders(html)
     html = html.replace("{{SUMMARY}}", summary.strip())
