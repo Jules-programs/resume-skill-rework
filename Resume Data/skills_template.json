@@ -1,0 +1,63 @@
+{
+  "Programming Languages": [
+    "Java",
+    "JavaScript",
+    "TypeScript",
+    "C#",
+    "Python",
+    "SQL"
+  ],
+  "Frontend Development": [
+    "React",
+    "Next.js",
+    "Vite",
+    "TypeScript Components",
+    "Responsive Web Design",
+    "Component-Based Architecture",
+    "REST API Integration",
+    "State Management (Zustand/Redux)",
+    "UI/UX Design Principles"
+  ],
+  "Backend Development": [
+    "Node.js",
+    "Express.js",
+    "RESTful API Development",
+    "Authentication & Session Handling",
+    "CRUD Operations",
+    "Server-Side Rendering (Next.js)"
+  ],
+  "Database & Data Management": [
+    "MySQL",
+    "MongoDB",
+    "Relational Database Design",
+    "Entity Relationship (ER) Modeling",
+    "Database Normalization (1NF–3NF)",
+    "Indexing & Query Optimization",
+    "Constraints & Schema Design"
+  ],
+  "Cloud & DevOps": [
+    "AWS (EC2, S3, Lambda basics)",
+    "Docker (containerization fundamentals)",
+    "CI/CD Pipelines (GitHub Actions)",
+    "Infrastructure as Code (Terraform basics)",
+    "Linux Command Line",
+    "Monitoring & Logging (beginner level)"
+  ],
+  "Software Development Concepts": [
+    "Object-Oriented Programming (OOP)",
+    "Data Structures & Algorithms",
+    "Systems Analysis & Design",
+    "Agile / Iterative Development",
+    "Debugging & Testing",
+    "Performance Optimization",
+    "Requirements Gathering",
+    "Full Software Development Lifecycle (SDLC)"
+  ],
+  "Tools & Technologies": [
+    "Git",
+    "GitHub",
+    "VS Code",
+    "Visual Studio",
+    "Browser DevTools"
+  ]
+}
