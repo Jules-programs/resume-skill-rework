@@ -1,8 +1,8 @@
-# Resume Tailor System 🚀
+# Resume Tailor System 
 
 Automatically tailor your resume and cover letter to specific job postings using AI. This system extracts job requirements from postings and regenerates your resume/cover letter to highlight the most relevant skills and experiences.
 
-## Features ✨
+## Features 
 
 - **Smart Job Extraction**: LLM analyzes job postings to extract requirements, skills, and responsibilities
 - **Intelligent Skill Filtering**: Only shows skills that match the job posting  
@@ -51,7 +51,7 @@ GPA=3.75
 LANGUAGES=English, Spanish
 ```
 
-## Usage 📝
+## Usage 
 
 1. **Populate your data**:
    - Update `experience.json` with your work history
@@ -77,7 +77,7 @@ LANGUAGES=English, Spanish
    - `tailored_resume.pdf` - Your resume optimized for this job
    - `tailored_cover_letter.pdf` - Personalized cover letter
 
-## Data Files 📋
+## Data Files 
 
 ### experience.json
 ```json
@@ -122,7 +122,7 @@ Organize skills by category:
 }
 ```
 
-## LLM Configuration ⚙️
+## LLM Configuration 
 
 The script uses **Ollama** for local LLM inference. You can change the model in `resume_tailor_script.py`:
 
@@ -144,7 +144,7 @@ Pull a model:
 ollama pull mistral
 ```
 
-## How It Works 🔄
+## How It Works 
 
 1. **Job Profile Extraction** - LLM analyzes job posting and extracts:
    - Required & preferred skills
@@ -191,7 +191,7 @@ ollama pull mistral
 - Verify HTML files generated in `/output/` look correct
 - Ensure CSS file exists at `resume-tailor/styles/styles.css`
 
-## Tips for Best Results 💡
+## Tips for Best Results 
 
 1. **Be detailed in experience.json**: The more context you provide, the better the AI can tailor content
 
@@ -205,7 +205,7 @@ ollama pull mistral
 
 6. **Update regularly**: Keep your `skills.json` and `projects.json` current
 
-## Advanced Usage 🚀
+## Advanced Usage 
 
 ### Batch Processing
 To tailor to multiple jobs, simply run the script multiple times:
@@ -233,7 +233,7 @@ Modify `resume-tailor/styles/styles.css` to change:
 - Spacing (adjust margins/padding)
 - PDF layout (paper size, margins)
 
-## Performance Notes 📊
+## Performance Notes 
 
 - **Speed**: Depends on LLM model and hardware
   - phi3: ~10-15 seconds per run
