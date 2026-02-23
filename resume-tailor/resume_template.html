@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{FIRST_NAME}} {{LAST_NAME}} - Resume</title>
     <link rel="stylesheet" href="styles/styles.css" />
 </head>
@@ -14,57 +15,65 @@
     <div class="header">
         <div class="header-left">
             <h1 class="name">{{FIRST_NAME}} {{LAST_NAME}}</h1>
+            <p class="summary">{{SUMMARY}}</p>
         </div>
         <div class="header-right">
-            <p>{{ADDRESS}}</p>
-            <p>{{PHONE}}</p>
-            <p><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
-            <p><a href="{{GITHUB}}">GitHub</a></p>
-            <p><a href="{{LINKEDIN}}">LinkedIn</a></p>
+            <div class="contact-info">
+                <p>{{PHONE}}</p>
+                <p><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
+                <p>{{ADDRESS}}</p>
+                <p><a href="{{GITHUB}}" target="_blank">github.com/profile</a></p>
+                <p><a href="{{LINKEDIN}}" target="_blank">linkedin.com/in/profile</a></p>
+            </div>
         </div>
     </div>
 
+    <div class="divider"></div>
+
     <div class="content">
 
-        <!-- LEFT COLUMN -->
-        <div class="left-column">
+        <!-- LEFT COLUMN (MAIN) -->
+        <div class="main-column">
 
             <section>
-                <h2>Education</h2>
-                <div class="entry">
-                    <div class="entry-title">
-                        <strong>{{SCHOOL}}</strong>
-                        <span class="italic">{{DEGREE}}</span>
-                    </div>
-                    <p>{{GRADUATION_DATE}}</p>
-                    <p>{{PROGRAM}}</p>
-                    <p><strong>GPA:</strong> {{GPA}}</p>
-                </div>
+                <h2 class="section-title">Work Experience</h2>
+                {{EXPERIENCE}}
             </section>
 
             <section>
-                <h2>Projects</h2>
+                <h2 class="section-title">Projects</h2>
                 {{PROJECTS}}
             </section>
 
             <section>
-                <h2>Work Experience</h2>
-                {{EXPERIENCE}}
+                <h2 class="section-title">Education</h2>
+                <div class="entry">
+                    <div class="entry-header">
+                        <strong>{{SCHOOL}}</strong>
+                        <span class="degree-badge">{{DEGREE}}</span>
+                    </div>
+                    <div class="entry-meta">
+                        <span>{{GRADUATION_DATE}}</span>
+                        <span class="bullet-sep">•</span>
+                        <span>GPA: {{GPA}}</span>
+                    </div>
+                    <p class="entry-note">{{PROGRAM}}</p>
+                </div>
             </section>
 
         </div>
 
-        <!-- RIGHT COLUMN -->
-        <div class="right-column">
+        <!-- RIGHT COLUMN (SIDEBAR) -->
+        <div class="sidebar">
 
             <section>
-                <h2>Skills</h2>
+                <h2 class="section-title">Technical Skills</h2>
                 {{SKILLS_TABLE}}
             </section>
 
             <section>
-                <h2>Languages</h2>
-                {{LANGUAGES}}
+                <h2 class="section-title">Languages</h2>
+                <p>{{LANGUAGES}}</p>
             </section>
 
         </div>

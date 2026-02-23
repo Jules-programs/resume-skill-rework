@@ -1,3 +1,7 @@
+/* ============================================
+   RESUME STYLESHEET - PROFESSIONAL LAYOUT
+   ============================================ */
+
 /* RESET */
 * {
     margin: 0;
@@ -5,114 +9,374 @@
     box-sizing: border-box;
 }
 
-/* PAGE SETTINGS (PDF SAFE) */
+/* ============================================
+   PAGE & BODY
+   ============================================ */
+
 @page {
     size: A4;
-    margin: 1in;
+    margin: 0.6in 0.5in;
+}
+
+html, body {
+    height: 100%;
+    background: #f0f0f0;
 }
 
 body {
-    font-family: "Georgia", serif;
-    background: #f4f4f4;
-    color: #111;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #1a1a1a;
     line-height: 1.5;
+    font-size: 10pt;
 }
 
-/* MAIN RESUME CONTAINER */
+/* ============================================
+   MAIN RESUME CONTAINER
+   ============================================ */
+
 .resume {
     background: #ffffff;
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 50px;
-    border: 1px solid #ddd;
+    max-width: 8.5in;
+    height: 11in;
+    margin: 10px auto;
+    padding: 0.5in;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
-/* HEADER */
+/* ============================================
+   HEADER SECTION
+   ============================================ */
+
 .header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #003d82;
+}
+
+.header-left {
+    flex: 1;
 }
 
 .name {
-    font-size: 42px;
+    font-size: 24pt;
     font-weight: 700;
-    letter-spacing: 1px;
+    color: #003d82;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    line-height: 1.1;
+}
+
+.summary {
+    font-size: 9pt;
+    color: #444;
+    line-height: 1.4;
+    font-style: italic;
+    margin-top: 4px;
 }
 
 .header-right {
     text-align: right;
-    font-size: 14px;
+    font-size: 8.5pt;
+    flex: 0 0 auto;
+    margin-left: 20px;
 }
 
-.header-right a {
-    color: #1a5fd0;
+.contact-info p {
+    margin-bottom: 2px;
+    color: #1a1a1a;
+    white-space: nowrap;
+}
+
+.contact-info a {
+    color: #003d82;
     text-decoration: none;
+    font-weight: 500;
 }
 
-.header-right a:hover {
+.contact-info a:hover {
     text-decoration: underline;
 }
 
-/* TWO COLUMN LAYOUT */
+.divider {
+    display: none;
+}
+
+/* ============================================
+   CONTENT LAYOUT (2 COLUMNS)
+   ============================================ */
+
 .content {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 50px;
+    grid-template-columns: 1fr 0.35fr;
+    gap: 0.3in;
+    flex: 1;
+    overflow: hidden;
 }
 
-/* SECTION TITLES */
+.main-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.main-column::-webkit-scrollbar {
+    width: 4px;
+}
+
+.main-column::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.main-column::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 2px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-left: 1px solid #e5e5e5;
+    padding-left: 12px;
+    overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 2px;
+}
+
+/* ============================================
+   SECTION STYLING
+   ============================================ */
+
 section {
-    margin-bottom: 35px;
+    margin-bottom: 0;
 }
 
-section h2 {
-    font-size: 14px;
+.section-title {
+    font-size: 11pt;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #1a5fd0;
-    margin-bottom: 15px;
+    letter-spacing: 0.8px;
+    color: #003d82;
+    margin-bottom: 6px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #e5e5e5;
 }
 
-/* ENTRY STYLING */
+/* ============================================
+   ENTRY STYLING (Experience, Projects, Education)
+   ============================================ */
+
 .entry {
-    margin-bottom: 20px;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+}
+
+.entry:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 10pt;
+    margin-bottom: 2px;
+}
+
+.entry-header strong {
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.degree-badge {
+    font-size: 9pt;
+    color: #666;
+    font-style: italic;
+    font-weight: 500;
 }
 
 .entry-title {
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
+    align-items: baseline;
+    font-size: 10pt;
+    margin-bottom: 2px;
 }
+
+.entry-title strong {
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.entry-title .italic {
+    font-style: italic;
+    color: #666;
+    font-size: 9pt;
+    font-weight: 500;
+}
+
+.entry-meta {
+    font-size: 8.5pt;
+    color: #666;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.entry-meta span {
+    white-space: nowrap;
+}
+
+.bullet-sep {
+    color: #bbb;
+}
+
+.entry-note {
+    font-size: 9pt;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* ============================================
+   BULLETS AND LISTS
+   ============================================ */
+
+.entry-bullets {
+    list-style: none;
+    padding-left: 0;
+    margin: 3px 0 0 0;
+}
+
+.entry-bullets li {
+    font-size: 9pt;
+    line-height: 1.35;
+    color: #1a1a1a;
+    margin-bottom: 2px;
+    padding-left: 12px;
+    position: relative;
+    text-align: justify;
+}
+
+.entry-bullets li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #003d82;
+    font-weight: bold;
+}
+
+/* ============================================
+   SKILLS TABLE
+   ============================================ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+table tr {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+table tr:last-child {
+    border-bottom: none;
+}
+
+table td {
+    padding: 3px 0;
+    font-size: 9pt;
+    color: #1a1a1a;
+}
+
+table td.category {
+    font-weight: 700;
+    color: #003d82;
+    font-size: 9pt;
+    padding-top: 6px;
+    padding-bottom: 3px;
+}
+
+table td.skill-item {
+    padding-left: 0;
+    padding-right: 8px;
+    color: #444;
+}
+
+/* Alternating columns in skills */
+table tr td:first-child {
+    width: 50%;
+    padding-right: 4px;
+}
+
+table tr td:last-child {
+    width: 50%;
+    padding-left: 4px;
+}
+
+/* ============================================
+   RESPONSIVE & PRINT
+   ============================================ */
+
+@media print {
+    body {
+        background: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .resume {
+        max-width: none;
+        height: auto;
+        margin: 0;
+        box-shadow: none;
+        padding: 0.6in 0.5in;
+    }
+
+    .main-column,
+    .sidebar {
+        overflow: visible;
+        padding-right: 0;
+    }
+
+    .sidebar {
+        padding-left: 12px;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
 
 .italic {
     font-style: italic;
 }
 
-.entry p {
-    font-size: 14px;
-    margin-bottom: 4px;
+.bold {
+    font-weight: 700;
 }
 
-/* SKILLS STYLING */
-.right-column ul {
-    list-style: none;
-}
-
-.right-column li {
-    font-size: 14px;
-    margin-bottom: 6px;
-}
-
-/* PRINT OPTIMIZATION */
-@media print {
-    body {
-        background: white;
-    }
-
-    .resume {
-        margin: 0;
-        border: none;
-        padding: 0;
-    }
+.text-muted {
+    color: #666;
 }
